@@ -7,6 +7,10 @@ import { useState } from 'react'
 const App = () => {
   const [chatHistory, setChatHistory] = useState([]);
 
+  const generateBotResponse = (history) => {
+    console.log(history);
+  };
+
   return (
     <div className='container'>
       <div className='chatbot-popup'>
@@ -37,7 +41,7 @@ const App = () => {
 
         {/*Chatbot Footer */}
         <div className="chat-footer">
-          <ChatForm setChatHistory={setChatHistory} />
+          <ChatForm chatHistory={chatHistory} setChatHistory={setChatHistory} generateBotResponse={generateBotResponse}/>
         </div>
       </div>
     </div>

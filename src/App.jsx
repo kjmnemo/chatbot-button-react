@@ -33,7 +33,7 @@ const App = () => {
             </p>
           </div>
           
-          {/* Render the the caht history dinamically */}
+          {/* Render the chat history dinamically */}
           {chatHistory.map((chat, index) => (
             <ChatMessage key={index} chat={chat} />
           ))}
